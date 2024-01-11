@@ -33,7 +33,7 @@ async def download_avatar(avatar_url):
 
 @tasks.loop(minutes=10)
 async def change_avatar():
-    avatar_url = "https://cdn.discordapp.com/attachments/1127176167842136105/1175013417694797824/Baslksz11_20231114205029_1_1.png?ex=6569af85&is=65573a85&hm=151696585048c748ed222745&"
+    avatar_url = "https://media.discordapp.net/attachments/1192390233170382959/1194966157615169608/78e65b83-86d2-45dc-98fc-284d0f7cb5f0.jpg?ex=65b245f5&is=659fd0f5&hm=0d996a587514def4f285a2080dd4692bc9b206ad2ff7af157383300b54375fb9&"
     await bot.user.edit(avatar=await download_avatar(avatar_url))
 
 @bot.event
