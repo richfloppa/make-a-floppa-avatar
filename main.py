@@ -19,10 +19,10 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if "floppa" in message.content.lower():
+    if "floppa" in message.content.lower(): # floppa avatar
         await bot.user.edit(avatar=await download_avatar("https://media.discordapp.net/attachments/1121779036360806433/1170673973990805594/Screenshot_20231105_134014.jpg?ex=6559e619&is=65477119&hm=dbda749bd20e434a56f71be6"))
-        await asyncio.sleep(10)  # Wait for 50 seconds
-        await bot.user.edit(avatar=await download_avatar("https://media.discordapp.net/attachments/1192390233170382959/1194966157615169608/78e65b83-86d2-45dc-98fc-284d0f7cb5f0.jpg?ex=65b245f5&is=659fd0f5&hm=0d996a587514def4f285a2080dd4692bc9b206ad2ff7af157383300b54375fb9&"))
+        await asyncio.sleep(10)  # Current avatar
+        await bot.user.edit(avatar=await download_avatar("https://cdn.discordapp.com/attachments/1199782360703565875/1207619615883137104/0215_1.gif?ex=65e04e68&is=65cdd968&hm=5b6d5d1eaacde8b95c68de15a84cad67ebe219e8de5b561e4bbe1b54aacd498c&"))
 
 async def download_avatar(avatar_url):
     async with aiohttp.ClientSession() as session:
